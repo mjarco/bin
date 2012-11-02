@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+from datetime import datetime
+from sys import argv
+
+timestamp = float(argv[1])
+if timestamp > 2**32:
+    timestamp = timestamp/1000
+print datetime.utcfromtimestamp(timestamp)
